@@ -16,9 +16,19 @@
  *
  */
 import React, { useState, useEffect } from 'react';
+import classnames from "classnames";
 
-export function Typography() {
+export function Typography(props) {
+	// This wraps the children in the tailwind typography prose class
+	/*
+	 * Props
+	 * Children: components to wrap
+	 * 
+	 */
+	classes = classnames("prose", "lg:prose-xl")
 	return (
-		<div></div>
+		<article className={classes}>
+			{props.children}
+		</article>
 	)
 }
