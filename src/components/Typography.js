@@ -18,16 +18,30 @@
 import React, { useState, useEffect } from 'react';
 import classnames from "classnames";
 
-export function Typography(props) {
+export default function Typography(props) {
 	// This wraps the children in the tailwind typography prose class
 	/*
 	 * Props
 	 * Children: components to wrap
 	 * 
 	 */
-	classes = classnames("prose", "lg:prose-xl")
+	const classes = classnames("prose", "lg:prose-xl");
 	return (
 		<article className={classes}>
+			{props.children}
+		</article>
+	)
+}
+
+export function Coloured(props) {
+	// This wraps the children in the tailwind typography prose class
+	/*
+	 * Props
+	 * Children: components to wrap
+	 * 
+	 */
+	return (
+		<article style={props.style}>
 			{props.children}
 		</article>
 	)

@@ -1,7 +1,7 @@
-//import "./index.css";
-export * from "./buttons";
-export * from "./input";
-export * from "./navbar";
-export * from "./avatar";
-export * from "./typography";
-export * from "./menu";
+import './assets/styles.css'
+export * from './components/Avatar.js'
+export * from './components/Button.js'
+export * from './components/Input.js'
+export * from './components/Menu.js'
+export * from './components/Navbar.js'
+export * from './components/Typography.js'
